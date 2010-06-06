@@ -13,7 +13,7 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://search.cpan.org/CPAN/modules/by-module/Variable/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.perl.com/CPAN/modules/by-module/Variable/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	503c75e461e84de9f11c3735672abdd6
 URL:		http://search.cpan.org/dist/Variable-Magic/
 BuildRequires:	perl-devel >= 1:5.8.0
