@@ -8,13 +8,13 @@
 Summary:	Variable::Magic - Associate user-defined magic to variables from Perl
 #Summary(pl.UTF-8):	
 Name:		perl-Variable-Magic
-Version:	0.47
-Release:	2
+Version:	0.52
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.perl.com/CPAN/modules/by-module/Variable/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	ee8b101120e7971d6232aac339fb3472
+# Source0-md5:	3c3cb6b8adc20616f1e71af145ee73c1
 URL:		http://search.cpan.org/dist/Variable-Magic/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
