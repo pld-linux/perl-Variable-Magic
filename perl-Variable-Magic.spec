@@ -14,9 +14,11 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.perl.com/CPAN/modules/by-module/Variable/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	588d94ec3d98dece878a776d161c1dda
-URL:		http://search.cpan.org/dist/Variable-Magic/
+URL:		https://metacpan.org/release/Variable-Magic
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
+BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -42,6 +44,8 @@ zmiennej unikając bólu API języka C.
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
+%{__sed} -i -e '1s,/usr/bin/env perl,%{__perl},' samples/*.pl
+
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
@@ -58,7 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-cp -a samples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -p samples/*.pl $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
