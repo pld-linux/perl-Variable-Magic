@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests		# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define	pdir	Variable
 %define	pnam	Magic
@@ -14,7 +14,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Variable/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	ceb039e74253232bc5bdfb391ed5d6f5
-URL:		https://metacpan.org/release/Variable-Magic
+URL:		https://metacpan.org/dist/Variable-Magic
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
